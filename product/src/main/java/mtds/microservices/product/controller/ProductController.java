@@ -1,13 +1,12 @@
-package mtds.microservices.product.controller;
+package mtds.microservices.order.controller;
 
-import mtds.microservices.product.dao.ProductDao;
-import mtds.microservices.product.model.Product;
-import mtds.microservices.product.model.ProductDTO;
+import mtds.microservices.order.dao.ProductDao;
+import mtds.microservices.order.model.Product;
+import mtds.microservices.order.model.ProductDTO;
 //import mtds.microservices.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

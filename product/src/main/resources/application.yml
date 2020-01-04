@@ -32,6 +32,6 @@ spring:
 
 productqueue:
   rabbitmq:
-    exchange: produtc.exchange
+    exchange: product.exchange
     queue: product.queue
     routingkey: product.routingkey

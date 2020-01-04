@@ -1,6 +1,6 @@
 package mtds.microservices.order.service;
 
-import mtds.microservices.order.model.Product;
+import mtds.microservices.order.model.Order;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,14 +12,14 @@ public class RabbitMQSender {
     @Autowired
     private AmqpTemplate rabbitTemplate;
 
-    @Value("${productqueue.rabbitmq.exchange}")
+    @Value("${orderqueue.rabbitmq.exchange}")
     private String exchange;
 
-    @Value("${productqueue.rabbitmq.routingkey}")
+    @Value("${orderqueue.rabbitmq.routingkey}")
     private String routingkey;
 
-    public void send(Product product) {
-        rabbitTemplate.convertAndSend(exchange, routingkey, product);
-        System.out.println("Send msg = " + product);
+    public void send(Order order) {
+        rabbitTemplate.convertAndSend(exchange, routingkey, order);
+        System.out.println("Send msg = " + order);
 
     }}

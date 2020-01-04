@@ -6,12 +6,12 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EntityScan("mtds.microservices.product.model")
+@EntityScan("mtds.microservices.order.model")
 @EnableJpaRepositories("mtds.microservices.order.dao")
-public class ProductApplication {
+public class OrderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProductApplication.class, args);
+        SpringApplication.run(OrderApplication.class, args);
     }
 
 }

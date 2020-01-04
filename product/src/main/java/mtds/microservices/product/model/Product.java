@@ -1,4 +1,4 @@
-package mtds.microservices.product.model;
+package mtds.microservices.order.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;

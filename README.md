@@ -8,7 +8,13 @@ This project consists of the following services:
 * Product-service: microservice developed in java using spring boot
 * Order-service: the same product
 
+## Mysql Docker container - how to run it
 
+1) In the root of project there is a file named `mysql.yml` that has docker script to start the container with myslq, so in terminal set it up to the same path ;
+
+2) Run the command below to get it instaciated:
+
+    `docker-compose -f mysql.yml up`
 
 ## Accessing mysql in docker container (optional - no need for running)
 
