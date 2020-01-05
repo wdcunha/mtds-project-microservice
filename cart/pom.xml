@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>mtds.microservices</groupId>
-    <artifactId>order</artifactId>
+    <artifactId>cart</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>order</name>
-    <description>Order service for a microservice project in Spring Boot</description>
+    <name>cart</name>
+    <description>Cart service for a microservice project in Spring Boot</description>
 
     <properties>
         <java.version>11</java.version>

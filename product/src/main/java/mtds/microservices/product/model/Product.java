@@ -1,4 +1,4 @@
-package mtds.microservices.order.model;
+package mtds.microservices.product.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "product")
+@Table(name = "producttb")
 @JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, property = "@id", scope = Product.class)
 public class Product {
 
@@ -23,7 +23,20 @@ public class Product {
     private String productName;
 
     @Column
-    private String description;
+    private Double price;
+
+    @Column
+    private String pictureUrl;
+
+    public Product() {
+    }
+
+    public Product(Long id, String productName, Double price, String pictureUrl) {
+        this.id = id;
+        this.productName = productName;
+        this.price = price;
+        this.pictureUrl = pictureUrl;
+    }
 
     public String getProductName() {
         return productName;
@@ -33,19 +46,19 @@ public class Product {
         this.productName = productName;
     }
 
-    public String getDescription() {
-        return description;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "productName='" + productName + '\'' +
-                ", description='" + description + '\'' +
-                '}';
+    public String getPictureUrl() {
+        return pictureUrl;
+    }
+
+    public void setPictureUrl(String pictureUrl) {
+        this.pictureUrl = pictureUrl;
     }
 }

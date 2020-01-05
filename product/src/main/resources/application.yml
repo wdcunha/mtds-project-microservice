@@ -15,7 +15,7 @@ spring:
       enable: false
     ignored: /**
   jpa:
-    show-sql: false
+    show-sql: true
     hibernate:
       ddl-auto: update
     properties:
@@ -24,7 +24,7 @@ spring:
   jmx:
     enabled: false
   datasource:
-    url: jdbc:mysql://localhost/productdb?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+    url: jdbc:mysql://localhost:3306/productdb?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
     username: root
     password: root
     platform: mysql

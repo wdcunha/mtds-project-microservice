@@ -1,4 +1,4 @@
-package mtds.microservices.order.model;
+package mtds.microservices.cart.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -13,9 +13,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "ordertb")
-@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, property = "@id", scope = Order.class)
-public class Order  implements Serializable {
+@Table(name = "carttb")
+@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, property = "@id", scope = Cart.class)
+public class Cart implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -68,7 +68,7 @@ public class Order  implements Serializable {
 
     @Override
     public String toString() {
-        return "Order{" +
+        return "Cart{" +
                 "productName='" + productName + '\'' +
                 ", quantity='" + quantity + '\'' +
                 ", date=" + date +

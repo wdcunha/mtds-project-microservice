@@ -1,7 +1,7 @@
-package mtds.microservices.order.controller;
+package mtds.microservices.product.controller;
 
-import mtds.microservices.order.model.Product;
-import mtds.microservices.order.service.RabbitMQSender;
+import mtds.microservices.product.model.Product;
+import mtds.microservices.product.service.RabbitMQSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,11 +16,11 @@ public class RabbitMQController {
     RabbitMQSender rabbitMQSender;
 
     @GetMapping(value = "/producer")
-    public String producer(@RequestParam("productName") String productName, @RequestParam("description") String description) {
+    public String producer(@RequestParam("productName") String productName, @RequestParam("price") Double price) {
 
         Product product = new Product();
         product.setProductName(productName);
-        product.setDescription(description);
+        product.setPrice(price);
         rabbitMQSender.send(product);
 
         return "Message sent to the RabbitMQ productqueue Successfully";

@@ -1,6 +1,6 @@
-package mtds.microservices.order.service;
+package mtds.microservices.cart.service;
 
-import mtds.microservices.order.model.Order;
+import mtds.microservices.cart.model.Cart;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,14 +12,14 @@ public class RabbitMQSender {
     @Autowired
     private AmqpTemplate rabbitTemplate;
 
-    @Value("${orderqueue.rabbitmq.exchange}")
+    @Value("${cartqueue.rabbitmq.exchange}")
     private String exchange;
 
-    @Value("${orderqueue.rabbitmq.routingkey}")
+    @Value("${cartqueue.rabbitmq.routingkey}")
     private String routingkey;
 
-    public void send(Order order) {
-        rabbitTemplate.convertAndSend(exchange, routingkey, order);
-        System.out.println("Send msg = " + order);
+    public void send(Cart cart) {
+        rabbitTemplate.convertAndSend(exchange, routingkey, cart);
+        System.out.println("Send msg = " + cart);
 
     }}

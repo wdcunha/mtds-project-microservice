@@ -2,11 +2,15 @@
 
 This project consists of the following services:
 
+* Database: used Mysql
 * Discovery: used Eureka Service, a Netflix Spring Cloud component that is responsible to handle locations of services, making them visible for the whole group of services;
-* Gateway: 
-* Messaging: Rabbitmq is used 
-* Product-service: microservice developed in java using spring boot
-* Order-service: the same product
+* Gateway: used the one native from Minikube;
+* Messaging: Rabbitmq is used to exchange information between services, that is done horizontally;
+* Product-service: microservice developed in java using spring boot, responsible to manage products in its database done in mysql;
+* Cart-service: also developed in java using spring boot, service in charge of keep prodcuts and its quantities, as well price;
+* Order-service: service receives cart's data after cliente dicided to finish choosing items, also developed in java using spring boot;
+
+All of above items run in a separate container in Minikube.
 
 ## Mysql Docker container - how to run it
 

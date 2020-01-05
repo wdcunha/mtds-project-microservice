@@ -1,8 +1,8 @@
-package mtds.microservices.order.model;
+package mtds.microservices.cart.model;
 
 import java.util.Date;
 
-public class OrderDTO {
+public class CartDTO {
 
     private String productName;
     private int quantity;

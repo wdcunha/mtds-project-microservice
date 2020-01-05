@@ -1,9 +1,10 @@
-package mtds.microservices.order.model;
+package mtds.microservices.product.model;
 
 public class ProductDTO {
 
     private String productName;
-    private String description;
+    private Double price;
+    private String pictureUrl;
 
     public String getProductName() {
         return productName;
@@ -13,12 +14,19 @@ public class ProductDTO {
         this.productName = productName;
     }
 
-    public String getDescription() {
-        return description;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
+    public String getPictureUrl() {
+        return pictureUrl;
+    }
+
+    public void setPictureUrl(String pictureUrl) {
+        this.pictureUrl = pictureUrl;
+    }
 }

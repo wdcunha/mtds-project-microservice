@@ -1,6 +1,6 @@
-package mtds.microservices.order.dao;
+package mtds.microservices.product.dao;
 
-import mtds.microservices.order.model.Product;
+import mtds.microservices.product.model.Product;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

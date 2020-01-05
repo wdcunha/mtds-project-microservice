@@ -1,4 +1,4 @@
-package mtds.microservices.order.config;
+package mtds.microservices.product.config;
 
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.Binding;

@@ -2,22 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6054c77-7f71-4e72-b3ba-2188c2c3e6f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/order/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/order/dao/OrderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/product/ProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/order/OrderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/product/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/order/config/RabbitMQConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/product/controller/ProductController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/product/controller/RabbitMQController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/order/controller/RabbitMQController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/product/dao/ProductDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/product/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/order/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/product/model/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/order/model/OrderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/product/service/ProductService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/product/service/RabbitMQSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/mtds/microservices/order/service/RabbitMQSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cart/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/order/OrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/cart/CartApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/order/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/cart/config/RabbitMQConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/order/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/cart/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/order/controller/RabbitMQController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/cart/controller/RabbitMQController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/order/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/cart/dao/CartDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/order/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/cart/model/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/order/model/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/cart/model/CartDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/order/service/RabbitMQSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/cart/service/RabbitMQSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/src/test/java/mtds/microservices/order/OrderApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/test/java/mtds/microservices/cart/CartApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/test/java/mtds/microservices/product/ProductApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/test/java/mtds/microservices/order/OrderApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/ProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/ProductApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/config/RabbitMQConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/controller/ProductController.java" afterDir="false" />
@@ -86,7 +88,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/order/pom.xml" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Dropbox/Trabalho_MTSDS_2020/Outros/lojaProdutos" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -117,7 +119,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderApplication">
+  <component name="RunManager" selected="Spring Boot.ProductApplication">
     <configuration name="DiscoveryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="discovery" />
       <extension name="coverage">
@@ -144,12 +146,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="product" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mtds.microservices.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="mtds.microservices.product.ProductApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Spring Boot.DiscoveryApplication" />
       <item itemvalue="Spring Boot.OrderApplication" />
+      <item itemvalue="Spring Boot.ProductApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ProductApplication" />
         <item itemvalue="Spring Boot.OrderApplication" />
         <item itemvalue="Spring Boot.DiscoveryApplication" />
       </list>
@@ -169,6 +186,11 @@
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2217e5c1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@f0cfcf70" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2217e5c1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@acce73c2" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -198,7 +220,7 @@
       <workItem from="1577743780185" duration="4190000" />
       <workItem from="1577785811452" duration="16867000" />
       <workItem from="1577836573553" duration="32289000" />
-      <workItem from="1578067747786" duration="21844000" />
+      <workItem from="1578067747786" duration="34518000" />
     </task>
     <servers />
   </component>

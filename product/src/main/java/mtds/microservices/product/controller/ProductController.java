@@ -1,9 +1,8 @@
-package mtds.microservices.order.controller;
+package mtds.microservices.product.controller;
 
-import mtds.microservices.order.dao.ProductDao;
-import mtds.microservices.order.model.Product;
-import mtds.microservices.order.model.ProductDTO;
-//import mtds.microservices.product.service.ProductService;
+import mtds.microservices.product.dao.ProductDao;
+import mtds.microservices.product.model.Product;
+import mtds.microservices.product.model.ProductDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +31,8 @@ public class ProductController {
     public ResponseEntity<?> saveProd(@RequestBody ProductDTO productDTO) {
         Product newProduct = new Product();
         newProduct.setProductName(productDTO.getProductName());
-        newProduct.setDescription(productDTO.getDescription());
+        newProduct.setPrice(productDTO.getPrice());
+        newProduct.setPictureUrl(productDTO.getPictureUrl());
         return ResponseEntity.ok(productDao.save(newProduct));
     }
 //

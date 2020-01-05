@@ -1,6 +1,6 @@
-package mtds.microservices.order.service;
+package mtds.microservices.product.service;
 
-import mtds.microservices.order.model.Product;
+import mtds.microservices.product.model.Product;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

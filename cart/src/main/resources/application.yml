@@ -2,7 +2,7 @@ server:
   port: 8072
 spring:
   application:
-    name: order-service
+    name: cart-service
   rabbitmq:
     host: localhost
     port: 5672
@@ -24,14 +24,14 @@ spring:
   jmx:
     enabled: false
   datasource:
-    url: jdbc:mysql://localhost:3306/orderdb?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+    url: jdbc:mysql://localhost:3306/cartdb?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
     username: root
     password: root
     platform: mysql
     initialization-mode: always
 
-orderqueue:
+cartqueue:
   rabbitmq:
-    exchange: order.exchange
-    queue: order.queue
-    routingkey: order.routingkey
+    exchange: cart.exchange
+    queue: cart.queue
+    routingkey: cart.routingkey
