@@ -2,34 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6054c77-7f71-4e72-b3ba-2188c2c3e6f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cart/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/order/OrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/cart/CartApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/order/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/cart/config/RabbitMQConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/order/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/cart/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/order/controller/RabbitMQController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/cart/controller/RabbitMQController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/order/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/cart/dao/CartDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/order/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/cart/model/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/order/model/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/cart/model/CartDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/order/service/RabbitMQSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/mtds/microservices/cart/service/RabbitMQSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/src/test/java/mtds/microservices/order/OrderApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/test/java/mtds/microservices/cart/CartApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/ProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/ProductApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/config/RabbitMQConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/controller/RabbitMQController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/controller/RabbitMQController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/dao/ProductDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/model/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/model/ProductDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/service/RabbitMQSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/mtds/microservices/product/service/RabbitMQSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/test/java/mtds/microservices/product/ProductApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/test/java/mtds/microservices/product/ProductApplicationTests.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +194,7 @@
       <workItem from="1577743780185" duration="4190000" />
       <workItem from="1577785811452" duration="16867000" />
       <workItem from="1577836573553" duration="32289000" />
-      <workItem from="1578067747786" duration="34518000" />
+      <workItem from="1578067747786" duration="35889000" />
     </task>
     <servers />
   </component>
