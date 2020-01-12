@@ -16,6 +16,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 @RestController
+@CrossOrigin
 public class CartController {
 
     @Autowired
@@ -37,8 +38,7 @@ public class CartController {
     @RequestMapping(value = "/addCart", method = RequestMethod.POST)
     public ResponseEntity<?> saveCart(@RequestBody CartDTO cartDTO) {
         Cart newCart = new Cart();
-        Calendar cal = Calendar.getInstance();
-        Date date = cal.getTime();
+        Date date = Calendar.getInstance().getTime();
 
         newCart.setDate(date);
         return ResponseEntity.ok(cartDao.save(newCart));

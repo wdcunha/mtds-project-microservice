@@ -23,31 +23,20 @@ public class Order  implements Serializable {
     private long id;
 
     @Column
-    private String productName;
-
-    @Column
-    private int quantity;
+    private String userName;
 
     @Column
     private Date date;
 
     @Column
-    private Double price;
+    private Double amount;
 
-    public String getProductName() {
-        return productName;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public Date getDate() {
@@ -58,21 +47,20 @@ public class Order  implements Serializable {
         this.date = date;
     }
 
-    public Double getPrice() {
-        return price;
+    public Double getAmount() {
+        return amount;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setAmount(Double ammount) {
+        this.amount = ammount;
     }
 
     @Override
     public String toString() {
         return "Order{" +
-                "productName='" + productName + '\'' +
-                ", quantity='" + quantity + '\'' +
+                "productName='" + userName + '\'' +
                 ", date=" + date +
-                ", price=" + price +
+                ", price=" + amount +
                 '}';
     }
 }

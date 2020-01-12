@@ -26,11 +26,11 @@ public class RabbitMQConsumer {
         System.out.println("Recieved Message From RabbitMQ product queue: " + selectedProducts);
 
         try {
-            log.info("Making REST call to the API");
+
             this.cartService.insert(selectedProducts);
-            log.info("<< Exiting receiveMessageForApp1() after API call.");
+
         } catch (Exception ex) {
-            log.error("Error trying to save product in order database. Bypassing message requeue {}", ex);
+            log.error("Error trying to save product in cart database. Bypassing message requeue {}", ex);
         }
     }
 }

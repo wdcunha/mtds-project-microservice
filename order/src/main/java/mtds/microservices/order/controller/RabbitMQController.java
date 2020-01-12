@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 @RestController
 @RequestMapping(value = "/order-rabbitmq/")
 public class RabbitMQController {
@@ -16,11 +18,10 @@ public class RabbitMQController {
     RabbitMQSender rabbitMQSender;
 
     @GetMapping(value = "/producer")
-    public String producer(@RequestParam("productName") String productName, @RequestParam("quantity") String quantity) {
+    public String producer(@RequestParam("userName") String productName, @RequestParam("ammount") String ammount) {
 
         Order order = new Order();
-        order.setProductName(productName);
-        order.setQuantity(Integer.parseInt(quantity));
+        order.setAmount(Double.parseDouble(ammount));
         rabbitMQSender.send(order);
 
         return "Message sent to the RabbitMQ orderqueue Successfully";

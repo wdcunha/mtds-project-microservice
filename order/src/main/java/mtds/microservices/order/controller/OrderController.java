@@ -27,16 +27,20 @@ public class OrderController {
         return new ResponseEntity<>(orderDao.findAll(), HttpStatus.OK);
     }
 
+    @CrossOrigin
+    @RequestMapping(value = "/lastorder", method = RequestMethod.GET)
+    public ResponseEntity<Order> listLastCart() {
+        return new ResponseEntity<>(orderDao.findTopByOrderByIdDesc(), HttpStatus.OK);
+    }
+
     @RequestMapping(value = "/addOrder", method = RequestMethod.POST)
     public ResponseEntity<?> saveOrder(@RequestBody OrderDTO orderDTO) {
         Order newOrder = new Order();
-        Calendar cal = Calendar.getInstance();
-        Date date = cal.getTime();
+        Date date = Calendar.getInstance().getTime();
 
-        newOrder.setProductName(orderDTO.getProductName());
-        newOrder.setQuantity(orderDTO.getQuantity());
+        newOrder.setUserName(orderDTO.getUserName());
         newOrder.setDate(date);
-        newOrder.setPrice(orderDTO.getPrice());
+        newOrder.setAmount(orderDTO.getAmount());
         return ResponseEntity.ok(orderDao.save(newOrder));
     }
 

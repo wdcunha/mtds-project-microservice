@@ -20,6 +20,7 @@ public class RabbitMQSender {
 
     public void send(Order order) {
         rabbitTemplate.convertAndSend(exchange, routingkey, order);
-        System.out.println("Order Rabbitmq Sent msg = " + order);
+        System.out.println("Msg Sent by Order Rabbitmq = " + order);
 
-    }}
+    }
+}

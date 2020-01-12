@@ -1,28 +1,20 @@
 package mtds.microservices.order.model;
 
+import javax.persistence.Column;
 import java.util.Date;
 
 public class OrderDTO {
 
-    private String productName;
-    private int quantity;
+    private String userName;
     private Date date;
-    private Double price;
+    private Double amount;
 
-    public String getProductName() {
-        return productName;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public Date getDate() {
@@ -33,11 +25,11 @@ public class OrderDTO {
         this.date = date;
     }
 
-    public Double getPrice() {
-        return price;
+    public Double getAmount() {
+        return amount;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setAmount(Double amount) {
+        this.amount = amount;
     }
 }

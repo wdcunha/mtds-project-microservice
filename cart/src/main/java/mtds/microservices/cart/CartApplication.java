@@ -21,14 +21,5 @@ public class CartApplication {
         SpringApplication.run(CartApplication.class, args);
     }
 
-
-    @Bean
-    CommandLineRunner runner(CartDao cartDao) {
-        return args -> {
-
-            // cartDao.save(new Cart(1L, new ArrayList<>(), 1, new Date(), 300.0));
-        };
-    }
-
 }
 
