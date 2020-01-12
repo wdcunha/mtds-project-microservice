@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(value = "/product-rabbitmq/")
 public class RabbitMQController {
@@ -20,16 +22,11 @@ public class RabbitMQController {
 
     @CrossOrigin
     @PostMapping(value = "/producer")
-//    public String producer(@RequestParam("id") Long id, @RequestParam("productName") String productName, @RequestParam("price") Double price) {
-    public String producer(@RequestBody Product productRec) {
+    public String producer(@RequestBody List<Product> productsList) {
 
-        Product product = new Product();
-        product.setId(productRec.getId());
-        product.setProductName(productRec.getProductName());
-        product.setPrice(productRec.getPrice());
-        rabbitMQSender.send(product);
+        rabbitMQSender.send(productsList);
 
-        return new ResponseFactory().build(product).serialize();
+        return new ResponseFactory().build(productsList).serialize();
     }
 }
 

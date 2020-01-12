@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class RabbitMQSender {
 
@@ -18,8 +20,8 @@ public class RabbitMQSender {
     @Value("${productqueue.rabbitmq.routingkey}")
     private String routingkey;
 
-    public void send(Product product) {
-        rabbitTemplate.convertAndSend(exchange, routingkey, product);
-        System.out.println("Send msg = " + product);
+    public void send(List<Product> productsList) {
+        rabbitTemplate.convertAndSend(exchange, routingkey, productsList);
+        System.out.println("Product Rabbitmq Sent msg = " + productsList);
 
     }}

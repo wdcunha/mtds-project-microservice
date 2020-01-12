@@ -20,6 +20,6 @@ public class RabbitMQSender {
 
     public void send(Cart cart) {
         rabbitTemplate.convertAndSend(exchange, routingkey, cart);
-        System.out.println("Send msg = " + cart);
+        System.out.println("Cart Rabbitmq Sent msg = " + cart);
 
     }}

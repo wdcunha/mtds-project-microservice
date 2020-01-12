@@ -1,4 +1,4 @@
-version: '3.1'
+version: '3.7'
 
 services:
   db:
@@ -7,10 +7,17 @@ services:
     ports:
       - 3306:3306
     environment:
-      MYSQL_USER: root
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: mtsds
+      MYSQL_ROOT_PASSWORD: mtsds
     volumes:
-      - microservices_mtds:/var/lib/mysql
+      - microservices-mtds:/var/lib/mysql
+    networks:
+      - spring-mysql
+    container_name: mysql-container
+
+networks:
+  spring-mysql:
+    name: mysql-network
 
 volumes:
-  microservices_mtds:
+  microservices-mtds:

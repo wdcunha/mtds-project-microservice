@@ -1,53 +1,47 @@
 package mtds.microservices.cart.model;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "carttb")
-@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, property = "@id", scope = Cart.class)
 public class Cart implements Serializable {
+
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
-    @Column
-    private String productName;
-
-    @Column
-    private int quantity;
-
+    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Column(name = "product")
+    private List<Product> productsList;
     @Column
     private Date date;
 
-    @Column
-    private Double price;
-
-    public String getProductName() {
-        return productName;
+    public Cart() {
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public Cart(long id, List<Product> productsList, int quantity, Date date) {
+        this.id = id;
+        this.productsList = productsList;
+        this.date = date;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public long getId() {
+        return id;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public Date getDate() {
@@ -58,21 +52,20 @@ public class Cart implements Serializable {
         this.date = date;
     }
 
-    public Double getPrice() {
-        return price;
+    public List<Product> getProductsList() {
+        return productsList;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setProductsList(List<Product> productsList) {
+        this.productsList = productsList;
     }
 
     @Override
     public String toString() {
         return "Cart{" +
-                "productName='" + productName + '\'' +
-                ", quantity='" + quantity + '\'' +
+                "id=" + id +
+                ", productsList=" + productsList +
                 ", date=" + date +
-                ", price=" + price +
                 '}';
     }
 }

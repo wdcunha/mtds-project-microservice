@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "productName": "TV Set",
+    "price": 300,
+    "pictureUrl": "http://www.pngmart.com/files/1/TV-Transparent-PNG.png"
+  },
+  {
+    "id": 2,
+    "productName": "Game Console",
+    "price": 200,
+    "pictureUrl": "http://www.pngall.com/wp-content/uploads/2/Console-PNG-Transparent-HD-Photo.png"
+  },
+  {
+    "id": 3,
+    "productName": "Sofa",
+    "price": 100,
+    "pictureUrl": "http://www.pngall.com/wp-content/uploads/4/Luxury-Couch-PNG-Free-Image.png"
+  },
+  {
+    "id": 4,
+    "productName": "Macbook",
+    "price": 900,
+    "pictureUrl": "https://cdn4.iconfinder.com/data/icons/MacBook_Pro/512/leopard.png"
+  }
+]

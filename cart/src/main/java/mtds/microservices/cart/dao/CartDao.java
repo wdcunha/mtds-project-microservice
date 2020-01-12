@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CartDao extends CrudRepository<Cart, Long> {
+    Cart findTopByOrderByIdDesc();
 }

@@ -1,37 +1,36 @@
-package mtds.microservices.product.model;
+package mtds.microservices.cart.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "producttb")
+@Table(name = "cartproducttb")
 public class Product {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
-    @Column
     private String productName;
-
-    @Column
     private Double price;
-
-    @Column
     private String pictureUrl;
+
+    private int quantity;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "cart_id", nullable = false)
+    private Cart cart;
 
     public Product() {
     }
 
-    public Product(Long id, String productName, Double price, String pictureUrl) {
+    public Product(Long id, String productName, Double price, String pictureUrl, int quantity) {
         this.id = id;
         this.productName = productName;
         this.price = price;
         this.pictureUrl = pictureUrl;
+        this.quantity = quantity;
     }
 
     public long getId() {
@@ -64,5 +63,29 @@ public class Product {
 
     public void setPictureUrl(String pictureUrl) {
         this.pictureUrl = pictureUrl;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", productName='" + productName + '\'' +
+                ", price=" + price +
+                ", pictureUrl='" + pictureUrl + '\'' +
+                ", quantity=" + quantity +
+                ", cart=" + cart +
+                '}';
     }
 }

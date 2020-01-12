@@ -19,8 +19,6 @@ public class RabbitMQController {
     public String producer(@RequestParam("productName") String productName, @RequestParam("quantity") String quantity) {
 
         Cart cart = new Cart();
-        cart.setProductName(productName);
-        cart.setQuantity(Integer.parseInt(quantity));
         rabbitMQSender.send(cart);
 
         return "Message sent to the RabbitMQ cartqueue Successfully";

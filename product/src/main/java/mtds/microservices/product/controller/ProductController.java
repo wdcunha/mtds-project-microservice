@@ -16,9 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 public class ProductController {
 
-//    @Autowired
-//    private ProductService productService;
-
     @Autowired
     private ProductDao productDao;
 

@@ -16,27 +16,31 @@ import java.util.Calendar;
 import java.util.Date;
 
 @RestController
-@CrossOrigin
 public class CartController {
 
     @Autowired
     private CartDao cartDao;
 
+    @CrossOrigin
     @RequestMapping(value = "/carts", method = RequestMethod.GET)
     public ResponseEntity<Iterable<Cart>> listCarts() {
         return new ResponseEntity<>(cartDao.findAll(), HttpStatus.OK);
     }
 
+    @CrossOrigin
+    @RequestMapping(value = "/lastcart", method = RequestMethod.GET)
+    public ResponseEntity<Cart> listLastCart() {
+        return new ResponseEntity<>(cartDao.findTopByOrderByIdDesc(), HttpStatus.OK);
+    }
+
+    @CrossOrigin
     @RequestMapping(value = "/addCart", method = RequestMethod.POST)
     public ResponseEntity<?> saveCart(@RequestBody CartDTO cartDTO) {
         Cart newCart = new Cart();
         Calendar cal = Calendar.getInstance();
         Date date = cal.getTime();
 
-        newCart.setProductName(cartDTO.getProductName());
-        newCart.setQuantity(cartDTO.getQuantity());
         newCart.setDate(date);
-        newCart.setPrice(cartDTO.getPrice());
         return ResponseEntity.ok(cartDao.save(newCart));
     }
 
