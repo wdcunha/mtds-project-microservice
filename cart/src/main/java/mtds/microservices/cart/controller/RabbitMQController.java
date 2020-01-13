@@ -5,9 +5,9 @@ import mtds.microservices.cart.service.RabbitMQSender;
 import mtds.microservices.cart.util.ResponseFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -18,13 +18,14 @@ public class RabbitMQController {
     RabbitMQSender rabbitMQSender;
 
     @CrossOrigin
-    @GetMapping(value = "/producer")
-    public String producer(@RequestParam("amount") String amount) {
+    @PostMapping(value = "/producer")
+    public String producer(@RequestBody CartOrder cartOrder) {
 
-        CartOrder cartOrder = new CartOrder();
-        cartOrder.setAmmount(Double.parseDouble(amount));
-        rabbitMQSender.send(cartOrder);
+        System.out.println(cartOrder);
+        CartOrder newCartOrder = new CartOrder();
+        newCartOrder.setAmount(cartOrder.getAmount());
+        rabbitMQSender.send(newCartOrder);
 
-        return new ResponseFactory().build(cartOrder).serialize();
+        return new ResponseFactory().build(newCartOrder).serialize();
     }
 }

@@ -30,7 +30,7 @@ public class Cart implements Serializable {
     public Cart() {
     }
 
-    public Cart(long id, List<Product> productsList, int quantity, Date date) {
+    public Cart(long id, List<Product> productsList, Date date) {
         this.id = id;
         this.productsList = productsList;
         this.date = date;

@@ -1,6 +1,7 @@
 package mtds.microservices.cart.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -11,6 +12,8 @@ import javax.persistence.Table;
 public class Product {
 
     @Id
+    @GeneratedValue
+    private long product_id;
     private long id;
     private String productName;
     private Double price;
@@ -22,15 +25,12 @@ public class Product {
     @JoinColumn(name = "cart_id", nullable = false)
     private Cart cart;
 
-    public Product() {
+    public long getProduct_id() {
+        return product_id;
     }
 
-    public Product(Long id, String productName, Double price, String pictureUrl, int quantity) {
-        this.id = id;
-        this.productName = productName;
-        this.price = price;
-        this.pictureUrl = pictureUrl;
-        this.quantity = quantity;
+    public void setProduct_id(long product_id) {
+        this.product_id = product_id;
     }
 
     public long getId() {

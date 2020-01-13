@@ -4,7 +4,7 @@ spring:
   application:
     name: order-service
   rabbitmq:
-    host: localhost
+    host: rabbitmq
     port: 5672
     username: guest
     password: guest
@@ -14,21 +14,19 @@ spring:
     basic:
       enable: false
     ignored: /**
+
   jpa:
-    show-sql: true
+    database: MYSQL
     hibernate:
       ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
+
   jmx:
     enabled: false
   datasource:
-    url: jdbc:mysql://mysql-container:3306/orderdb?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+    url: jdbc:mysql://mysql-container:3306/orderdb?createDatabaseIfNotExist=true&autoReconnect=true
     username: root
     password: root
-    platform: mysql
-    initialization-mode: always
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 orderqueue:
   rabbitmq:

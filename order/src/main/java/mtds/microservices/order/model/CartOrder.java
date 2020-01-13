@@ -1,4 +1,4 @@
-package mtds.microservices.cart.model;
+package mtds.microservices.order.model;
 
 public class CartOrder {
 

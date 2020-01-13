@@ -1,6 +1,7 @@
 package mtds.microservices.order.service;
 
 import mtds.microservices.order.config.RabbitMQConfig;
+import mtds.microservices.order.model.CartOrder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -18,13 +19,13 @@ public class RabbitMQConsumer {
     @Autowired
     RabbitMQConfig rabbitMQConfig;
 
-    @RabbitListener(queues = "${orderqueue.rabbitmq.queue}")
-    public void recievedMessage(String amount) {
-        System.out.println("Recieved Message From RabbitMQ cart queue: " + amount);
+    @RabbitListener(queues = "${cartqueue.rabbitmq.queue}")
+    public void recievedMessage(CartOrder cartOrder) {
 
         try {
 
-            this.orderService.insert(amount);
+            System.out.println("Recieved Message From RabbitMQ cart queue: " + cartOrder);
+            this.orderService.insert(cartOrder);
 
         } catch (Exception ex) {
             log.error("Error trying to save product in order database. Bypassing message requeue {}", ex);
