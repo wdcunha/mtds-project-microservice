@@ -32,16 +32,4 @@ public class ProductController {
         newProduct.setPictureUrl(productDTO.getPictureUrl());
         return ResponseEntity.ok(productDao.save(newProduct));
     }
-//
-//    @RequestMapping(value = "/products", method = RequestMethod.GET)
-//    public ResponseEntity<Iterable<Product>> listProducts() {
-//        return new ResponseEntity<>(productService.productsList(), HttpStatus.OK);
-//    }
-//
-//    @RequestMapping(value = "/addProduct", method = RequestMethod.POST)
-//    public ResponseEntity<?> saveProd(@RequestBody ProductDTO productDTO) {
-//        return ResponseEntity.ok(productService.saveProduct(productDTO));
-//    }
-
-
 }

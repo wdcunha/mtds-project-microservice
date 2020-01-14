@@ -1,6 +1,5 @@
 package mtds.microservices.order.model;
 
-import javax.persistence.Column;
 import java.util.Date;
 
 public class OrderDTO {

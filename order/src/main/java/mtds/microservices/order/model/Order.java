@@ -15,7 +15,7 @@ import java.util.Date;
 @Entity
 @Table(name = "ordertb")
 @JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, property = "@id", scope = Order.class)
-public class Order  implements Serializable {
+public class Order implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id

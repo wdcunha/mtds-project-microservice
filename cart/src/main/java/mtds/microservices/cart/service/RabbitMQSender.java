@@ -22,4 +22,5 @@ public class RabbitMQSender {
         rabbitTemplate.convertAndSend(exchange, routingkey, cartOrder);
         System.out.println("Cart Rabbitmq Sent msg to Order = " + cartOrder);
 
-    }}
+    }
+}
