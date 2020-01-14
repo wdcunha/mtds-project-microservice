@@ -19,10 +19,8 @@ spring:
     database: MYSQL
     hibernate:
       ddl-auto: update
-
   jmx:
     enabled: false
-
   datasource:
     url: jdbc:mysql://mysql-container:3306/cartdb?createDatabaseIfNotExist=true&autoReconnect=true
     username: root

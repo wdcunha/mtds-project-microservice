@@ -14,12 +14,10 @@ spring:
     basic:
       enable: false
     ignored: /**
-
   jpa:
     database: MYSQL
     hibernate:
       ddl-auto: update
-
   jmx:
     enabled: false
   datasource:

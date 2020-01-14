@@ -4,6 +4,13 @@ public class CartOrder {
 
     private Double amount;
 
+    public CartOrder() {
+    }
+
+    public CartOrder(Double amount) {
+        this.amount = amount;
+    }
+
     public Double getAmount() {
         return amount;
     }
@@ -12,5 +19,10 @@ public class CartOrder {
         this.amount = amount;
     }
 
-
+    @Override
+    public String toString() {
+        return "CartOrder{" +
+                "amount=" + amount +
+                '}';
+    }
 }
