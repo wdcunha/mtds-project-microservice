@@ -26,7 +26,7 @@ public class RabbitMQController {
 
         System.out.println(cartOrder);
         CartOrder newCartOrder = new CartOrder(cartOrder.getAmount());
-        // newCartOrder.setAmount(cartOrder.getAmount());
+
         rabbitMQSender.send(newCartOrder);
 
         return new ResponseFactory().build(newCartOrder).serialize();

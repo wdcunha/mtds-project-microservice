@@ -1,0 +1,28 @@
+server:
+  port: 8074
+spring:
+  application:
+    name: json-service
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+  main:
+    allow-bean-definition-overriding: true
+  security:
+    basic:
+      enable: false
+    ignored: /**
+
+jsonerizequeue:
+  rabbitmq:
+    exchange: jsonerize.exchange
+    queue: jsonerize.queue
+    routingkey: jsonerize.routingkey
+
+productqueue:
+  rabbitmq:
+    exchange: product.exchange
+    queue: product.queue
+    routingkey: product.routingkey
