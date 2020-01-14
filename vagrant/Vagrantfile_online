@@ -1,0 +1,34 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/xenial64"
+
+  config.vm.define "ubuntu_minikube" do |ubuntu_minikube|
+
+    config.vm.provider "virtualbox" do |vb|
+        vb.name = "Ubuntu Minikube"
+        vb.memory = "4096"
+        vb.cpus = "4"
+
+    args = []
+    config.vm.provision "shell",
+        path: "https://github.com/dtafonso/mei-mtsds-store/raw/master/vagrant/scripts/docker.sh",
+        args: args
+      
+    args = []
+    config.vm.provision "shell",
+        path: "https://github.com/dtafonso/mei-mtsds-store/raw/master/vagrant/scripts/minikube.sh",
+        args: args
+
+    args = []
+    config.vm.provision "shell",
+        path: "https://github.com/dtafonso/mei-mtsds-store/raw/master/vagrant/scripts/kubectl.sh",
+        args: args
+
+    args = []
+    config.vm.provision "shell",
+        path: "https://github.com/dtafonso/mei-mtsds-store/raw/master/vagrant/scripts/mei-mtsds-store.sh",
+        args: args
+    end
+
+  end
+
+end

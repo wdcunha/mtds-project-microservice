@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cart-bk
+  labels:
+    app: cart-bk
+spec:
+  containers:
+  - image: dafonso/cart-bk:6
+    name: cart-bk
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: cartbk
+spec:
+  selector:
+    app: cart-bk
+  ports:
+  - port: 8072
+  type: ClusterIP
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: cartbk-ext
+spec:
+  selector:
+    app: cart-bk
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8072
+      nodePort: 30073
+  type: NodePort

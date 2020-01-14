@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6054c77-7f71-4e72-b3ba-2188c2c3e6f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TrabalhoUI-Angular/src/app/json-file/json-file.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrabalhoUI-Angular/src/app/json-file/json-file.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrabalhoUI-Angular/src/app/json-file/json-file.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrabalhoUI-Angular/src/app/json-file/json-file.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrabalhoUI-Angular/src/app/services/json-file.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrabalhoUI-Angular/src/app/services/json-file.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrabalhoUI-Angular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/TrabalhoUI-Angular/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrabalhoUI-Angular/src/app/services/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/TrabalhoUI-Angular/src/app/services/product.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrabalhoUI-Angular/src/app/shopping-cart/shopping-cart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/TrabalhoUI-Angular/src/app/shopping-cart/shopping-cart.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrabalhoUI-Angular/src/app/shopping-cart/shopping-cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/TrabalhoUI-Angular/src/app/shopping-cart/shopping-cart.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,11 +214,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:@mysql-container" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:@mysql-container" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@65518c88" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -251,7 +236,7 @@
       <workItem from="1577836573553" duration="32289000" />
       <workItem from="1578067747786" duration="148465000" />
       <workItem from="1578606788548" duration="108236000" />
-      <workItem from="1579032399102" duration="224000" />
+      <workItem from="1579032399102" duration="1008000" />
     </task>
     <servers />
   </component>

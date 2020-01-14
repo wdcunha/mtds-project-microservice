@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: store
+spec:
+  selector:
+    matchLabels:
+      app: store
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: store
+    spec:
+      containers:
+        - name: store
+          image: dafonso/product-ui:m4
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: product-ui
+spec:
+  selector:
+    app: store
+  ports:
+  - port: 8080
+  type: ClusterIP
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: productui-ext
+spec:
+  selector:
+    app: store
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      nodePort: 30091
+    - name: http2
+      protocol: TCP
+      port: 8080
+      nodePort: 30092
+  type: NodePort

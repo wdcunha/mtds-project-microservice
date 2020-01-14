@@ -1,0 +1,35 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-store
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  backend:
+    serviceName: product-ui
+    servicePort: 8080
+  rules:
+  - host: loja-microservicos.info
+    http:
+      paths:
+      - path: /product-ui
+        backend:
+          serviceName: productui-ext
+          servicePort: 80
+      - path: /rabbitmq
+        backend:
+          serviceName: rabbitmq
+          servicePort: 5672
+      - path: /rabbitmq-ext
+        backend:
+          serviceName: rabbitmq
+          servicePort: 15672
+      - path: /mysql-container
+        backend:
+          serviceName: mysql-container
+          servicePort: 3036
+      - path: /productbk
+        backend:
+          serviceName: productbk
+          servicePort: 8071
+
