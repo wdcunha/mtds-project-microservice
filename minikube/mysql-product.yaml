@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sql-product
+  labels:
+    app: sql-product
+spec:
+  containers:
+  - image: mysql
+    name: sql-product
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      value: root
+    - name: MYSQL_DATABASE
+      value: productdb
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: sql-product-pod
+spec:
+  selector:
+    app: sql-product
+  ports:
+  - port: 3306
+  type: ClusterIP
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: sql-product-ext
+spec:
+  selector:
+    app: sql-product
+  ports:
+    - name: http
+      protocol: TCP
+      port: 3306
+      nodePort: 30306
+  type: NodePort

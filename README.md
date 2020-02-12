@@ -1,4 +1,8 @@
-# MTDS project - Microservice
+# MTSDS Store
+Microservices Store Concept on Kubernetes
+
+This Repository continues the work of wdcunha's repository:
+https://github.com/wdcunha/mtds-project-microservice
 
 This project consists of the following services:
 
@@ -35,6 +39,3 @@ All of above items run in a separate container in Minikube.
     * show tables
     * CTRL + D (quit)
     * [list of mysql console commands](http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm)
-    
-
-
