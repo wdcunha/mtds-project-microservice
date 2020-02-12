@@ -25,7 +25,7 @@ spring:
     enabled: false
 
   datasource:
-    url: jdbc:mysql://mysql-container:3306/productdb?createDatabaseIfNotExist=true&autoReconnect=true
+    url: jdbc:mysql://sql-product-pod:3306/productdb?createDatabaseIfNotExist=true&autoReconnect=true
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
